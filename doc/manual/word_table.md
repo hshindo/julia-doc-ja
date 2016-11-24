@@ -46,6 +46,23 @@
 | binary operator                       | 二項演算子
 | primitive numeric type / numeric primitive type                 | 数値プリミティブ型
 | Arbitrary Precision Arithmetic        | 任意精度計算
+| elementwise                           | 要素単位（elementwise）
+| short-circuit evaluation              | 短絡評価
+| Dot Syntax for Vectorizing Functions  | ベクトル化関数のドット構文
+| modulus, modulo                       | 合同式の法、余剰演算
+| derivative                            | 微分
+| arithmetic operation                  | 算術処理
+| variable-width                        | 可変幅
+| variable-length                       | 可変長
+| byte array literals                   | バイト配列リテラル
+| assignment form                       | 代入形式
+| anonymous function                    | 無名関数
+| tuple                                 | チュープル
+| tuple “destructuring”                 | チュープル「構造解除」
+| varargs                               | 可変引数
+| Parametrically-constrained Varargs methods         | パラメトリック制約付き可変引数メソッド
+| Performance Tip                       | パフォーマンスに関するヒント
+| Pre-allocating outputs                | 出力の事前割り当て
 | 
 | 
 | 
@@ -60,4 +77,4 @@
 | 
 | 
 | 
-                      |
+| 
