@@ -938,8 +938,8 @@ CまたはC ++のバックグラウンドを持つ読者にとっては、なぜ
 .. _man-parametric-types:
 
 .. 
-Parametric Types
-----------------
+  Parametric Types
+  ----------------
 
 パラメータ型
 ----------------
@@ -1130,7 +1130,7 @@ However, ``Point`` itself is also a valid type object:
 -  ``Point{Float64}`` のインスタンスは、64ビット値の直接のペアとしてコンパクトかつ効率的に表現できます。
 -  ``Point{Real}`` のインスタンスは、 :obj:`Real` のインスタンスのペアを保持できる必要があります。
    :obj:`Real` のインスタンスであるオブジェクトは任意のサイズと構造にできるため、 ``Point{Real}`` のインスタンスは
-    個別に割り当てられた :obj:`Real` オブジェクトのポインタのペアとして表現されなければなりません。
+   個別に割り当てられた :obj:`Real` オブジェクトのポインタのペアとして表現されなければなりません。
 
 .. 
   The efficiency gained by being able to store ``Point{Float64}`` objects
