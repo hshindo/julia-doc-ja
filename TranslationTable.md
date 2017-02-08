@@ -46,10 +46,10 @@
 | loating point arithmetic              | 浮動小数点演算
 | GNU Multi-Precision Library           | GNU Multi-Precision Library
 | GNU MPFR Library                      | GNU MPFR Library
-| type promotion and conversion mechanism　| 型変換機能
+| type promotion and conversion mechanism　| 型プロモーションと変換機構
 | significand                           | 仮数
 | Numeric Literal Coefficients          | 数値リテラル係数
-| promotion system                      | 推進体制
+| promotion system                      | プロモーションシステム
 | operand                               | 被演算子
 | binary operator                       | 二項演算子
 | primitive numeric type / numeric primitive type                 | 数値プリミティブ型
@@ -65,8 +65,8 @@
 | byte array literals   |  バイト配列リテラル
 | assignment form   |  代入形式
 | anonymous function   |  無名関数
-| tuple   |  チュープル
-| tuple “destructuring”   |  チュープル「構造解除」
+| tuple   |  タプル
+| tuple “destructuring”   |  タプル「構造解除」
 | Varargs   |  可変引数
 | Parametrically-constrained Varargs methods   |  パラメトリック制約付き可変引数メソッド
 | Performance Tip   |  パフォーマンスに関するヒント
