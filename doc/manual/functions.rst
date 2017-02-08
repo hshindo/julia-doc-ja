@@ -425,8 +425,8 @@ Juliaの関数は `第1級オブジェクト <https://en.wikipedia.org/wiki/Firs
  being returned, rather than a single tuple value. For example, the
  following function returns a pair of values:
 
-Juliaでは、複数の値を返すシミュレーションするために値のチュープルを返します。しかし、チュープルは、
-括弧無しで作成および破棄することができ、それにより1つのチュープル値ではなく、複数の値が返されるという錯覚が発生します。
+Juliaでは、複数の値を返すシミュレーションするために値のタプルを返します。しかし、タプルは、
+括弧無しで作成および破棄することができ、それにより1つのタプル値ではなく、複数の値が返されるという錯覚が発生します。
 例えば、次の関数は1組の値を返します。
 
 .. doctest::
@@ -439,7 +439,7 @@ Juliaでは、複数の値を返すシミュレーションするために値の
  If you call it in an interactive session without assigning the return
  value anywhere, you will see the tuple returned:
 
-戻り値をどこにも指定せずに対話セッションで関数を呼び出すと、返されたチュープルが表示されます。
+戻り値をどこにも指定せずに対話セッションで関数を呼び出すと、返されたタプルが表示されます。
 
 .. doctest::
 
@@ -452,7 +452,7 @@ Juliaでは、複数の値を返すシミュレーションするために値の
  facilitates this:
 
 しかし、このような1組の戻り値の典型的な使用法は、それぞれの値を変数に抽出します。Juliaは、
-これを容易にするチュープル「構造解除」をサポートしています。
+これを容易にするタプル「構造解除」をサポートしています。
 
 .. doctest::
 
@@ -534,7 +534,7 @@ varargs関数を定義することができます。
  In all these cases, ``x`` is bound to a tuple of the trailing values
  passed to ``bar``.
 
-これらのケースの場合、 ``x`` は ``bar`` に渡された末尾の値のチュープルに紐付きます。
+これらのケースの場合、 ``x`` は ``bar`` に渡された末尾の値のタプルに紐付きます。
 
 ..
  It is possible to constrain the number of values passed as a variable argument; this will be discussed later in :ref:`man-vararg-fixedlen`.
@@ -563,7 +563,7 @@ varargs関数を定義することができます。
  where the variable number of arguments go. This need not be the case,
  however:
 
-この場合、値のチュープルは、可変引数がどこに渡されるか可変引数の呼び出しに継承されます。
+この場合、値のタプルは、可変引数がどこに渡されるか可変引数の呼び出しに継承されます。
 しかし、そうである必要はありません。
 
 .. doctest::
@@ -584,7 +584,7 @@ varargs関数を定義することができます。
  Furthermore, the iterable object spliced into a function call need not
  be a tuple:
 
-さらに、関数呼び出しに継承された繰り返し処理可能オブジェクトはチュープルである必要はありません。
+さらに、関数呼び出しに継承された繰り返し処理可能オブジェクトはタプルである必要はありません。
 
 .. doctest::
 
@@ -796,7 +796,7 @@ The types of keyword arguments can be made explicit as follows::
  arguments using a semicolon in a call, e.g. ``f(x, z=1; kwargs...)``.
  Dictionaries can also be used for this purpose.
 
-``f`` の内部では、 ``kwargs`` は各 ``key`` がシンボルである ``(key,value)`` のチュープルのコレクションになります。
+``f`` の内部では、 ``kwargs`` は各 ``key`` がシンボルである ``(key,value)`` のタプルのコレクションになります。
 そのようなコレクションは、呼び出しの際にセミコロンを使用してキーワード引数として渡すことができます。
 （例 ``f(x, z=1; kwargs...)`` ）辞書もこの目的のために使用することができます。
 
@@ -808,7 +808,7 @@ The types of keyword arguments can be made explicit as follows::
  ``plot(x, y, width=2)``.  This is useful in situations where the
  keyword name is computed at runtime.
 
-セミコロンの後にこのようなチュープルに割り当てられる ``(key,value)`` チュープル、
+セミコロンの後にこのようなタプルに割り当てられる ``(key,value)`` タプル、
 または繰り返し処理可能な式（ ``=>`` ペアなど）を渡すこともできます。例えば、
 ``plot(x, y; (:width,2))`` および ``plot(x, y; :width => 2)`` は ``plot(x, y, width=2)`` と同義です。
 これは、実行時にキーワード名が計算される場合に便利です。
