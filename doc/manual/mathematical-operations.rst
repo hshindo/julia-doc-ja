@@ -87,8 +87,8 @@ Juliaは、基本的な数値プリミティブ型の全ての算術演算子と
  types "just work" naturally and automatically. See :ref:`man-conversion-and-promotion`
  for details of the promotion system.
 
-Juliaの推進体制は、複数の引数の型を含む算術演算が自然にかつ自動的に
-動作するようにしています。プロモーションの詳細については :ref:`man-変換とプロモーション`を参照ください。
+Juliaのプロモーションシステムは、複数の引数の型を含む算術演算が自然にかつ自動的に
+動作するようにしています。プロモーションシステムの詳細については :ref:`man-変換とプロモーションシステム`を参照ください。
 
 ..
  Here are some simple examples using arithmetic operators:
