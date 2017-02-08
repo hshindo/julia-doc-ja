@@ -49,7 +49,7 @@
 | type promotion and conversion mechanism　| 型変換機能
 | significand                           | 仮数
 | Numeric Literal Coefficients          | 数値リテラル係数
-| promotion system                      | 推進体制？
+| promotion system                      | 推進体制
 | operand                               | 被演算子
 | binary operator                       | 二項演算子
 | primitive numeric type / numeric primitive type                 | 数値プリミティブ型
