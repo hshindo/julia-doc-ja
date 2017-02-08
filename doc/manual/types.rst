@@ -113,7 +113,7 @@ Juliaの型システムの他のハイレベルな側面は、以下の通りで
 -  変数ではなく値だけが型を持ちます。変数は単に値に結び付けられた名前です。
 -  抽象型および具象型は、他の型でパラメータ化できます。記号や、 :func:`isbits` がtrueを返す型の値（基本的には、
    C型のように格納された数値やブールや、他のオブジェクトへのポインタを持たない構造体）や、
-   それらのチュープルによってパラメータ化することもできます。型パラメータは、参照または制限する必要がない場合に省略することができます。
+   それらのタプルによってパラメータ化することもできます。型パラメータは、参照または制限する必要がない場合に省略することができます。
 
 .. 
  Julia's type system is designed to be powerful and expressive, yet
@@ -448,7 +448,7 @@ Juliaの数値階層を構成するいくつかの抽象型を考えてみまし
   invoked. (There may be a performance issue, however, in the case of function
   arguments that are containers of abstract types; see :ref:`man-performance-tips`.)
 
-注意すべき重要な点は、どれが呼び出されるかという引数の具体型の各チュープルに対して再コンパイルされるため、
+注意すべき重要な点は、どれが呼び出されるかという引数の具体型の各タプルに対して再コンパイルされるため、
 プログラマが引数が抽象型である関数に依存した場合、パフォーマンスに損失がないことです。
 しかし、抽象型のコンテナである関数の引数の場合は、パフォーマンスの問題がある可能性があります。
 詳細は :ref:`man-パフォーマスの助言` を参照してください。
@@ -1472,7 +1472,7 @@ However, ``Point`` itself is also a valid type object:
   Tuple Types
   ~~~~~~~~~~~
 
-チュープル型
+タプル型
 ~~~~~~~~~~~
 
 .. 
@@ -1483,9 +1483,9 @@ However, ``Point`` itself is also a valid type object:
   of one field. For example, a 2-element tuple type resembles the following
   immutable type::
 
-チュープルは関数の引数の抽象化ですが、関数自体はありません。関数の引数の顕著な側面は、その順序と型です。
-したがって、チュープル型は、各パラメータが1つのフィールドの型であるパラメータ化された不変型に似ています。
-例えば、2要素チュープル型は、次の不変型に似ています。::
+タプルは関数の引数の抽象化ですが、関数自体はありません。関数の引数の顕著な側面は、その順序と型です。
+したがって、タプル型は、各パラメータが1つのフィールドの型であるパラメータ化された不変型に似ています。
+例えば、2要素タプル型は、次の不変型に似ています。::
 
     immutable Tuple2{A,B}
         a::A
@@ -1503,16 +1503,16 @@ However, ``Point`` itself is also a valid type object:
 
 しかし、3つの重要な違いがあります。
 
-- チュープル型は、任意の数のパラメータを持つことができます。
-- チュープル型は、そのパラメータにおいて共変です。 ``Tuple{Int}`` は ``Tuple{Any}`` のサブタイプです。
-  したがって、 ``Tuple{Any}`` は抽象型とみなされ、チュープル型はパラメータがある場合にのみ具体型となります。
-- チュープルはフィールド名を持ちません。フィールドはインデックスによってのみアクセスされます。
+- タプル型は、任意の数のパラメータを持つことができます。
+- タプル型は、そのパラメータにおいて共変です。 ``Tuple{Int}`` は ``Tuple{Any}`` のサブタイプです。
+  したがって、 ``Tuple{Any}`` は抽象型とみなされ、タプル型はパラメータがある場合にのみ具体型となります。
+- タプルはフィールド名を持ちません。フィールドはインデックスによってのみアクセスされます。
 
 .. 
   Tuple values are written with parentheses and commas. When a tuple is constructed,
   an appropriate tuple type is generated on demand:
 
-チュープル値は、括弧とカンマで書かれます。チュープルが構築されると、必要に応じて適切なチュープル型が生成されます。
+タプル値は、括弧とカンマで書かれます。タプルが構築されると、必要に応じて適切なタプル型が生成されます。
 
 .. doctest::
 
@@ -1545,14 +1545,14 @@ However, ``Point`` itself is also a valid type object:
   Vararg Tuple Types
   ~~~~~~~~~~~~~~~~~~
 
-Varargチュープル型
+Varargタプル型
 ~~~~~~~~~~~~~~~~~~
 
 .. 
   The last parameter of a tuple type can be the special type ``Vararg``,
   which denotes any number of trailing elements:
 
-チュープル型の最後のパラメータは特殊な型 ``Vararg`` とすることができ、これは任意の数の末尾の要素を表します。
+タプル型の最後のパラメータは特殊な型 ``Vararg`` とすることができ、これは任意の数の末尾の要素を表します。
 
 .. doctest::
 
@@ -1573,7 +1573,7 @@ Varargチュープル型
   Vararg tuple types are used to represent the arguments accepted by varargs
   methods (see :ref:`man-varargs-functions`).
 
-``Vararg{T}`` が型 ``T`` の0個以上の要素に対応することに注意してください。Varargチュープル型は、
+``Vararg{T}`` が型 ``T`` の0個以上の要素に対応することに注意してください。Varargタプル型は、
 varargsメソッドで受け入れられる引数を表すために使用されます（ :ref:`man-varargs関数` を参照）。
 
 .. 
@@ -1582,7 +1582,7 @@ varargsメソッドで受け入れられる引数を表すために使用され�
   ``N`` elements of type ``T``.
 
 ``Vararg{T,N}`` 型は、型 ``T`` の正確に ``N`` 個の要素に対応します。 ``NTuple{N,T}`` は ``Tuple{Vararg{T,N}}`` の
-便利なエイリアスであり、これは型 ``T`` の ``N`` 個の要素を正確に含むチュープル型です。
+便利なエイリアスであり、これは型 ``T`` の ``N`` 個の要素を正確に含むタプル型です。
 
 
 .. _man-singleton-types:
@@ -2052,7 +2052,7 @@ Juliaの型はそれ自体がオブジェクトであるため、通常の関数
   ``Int``.
 
 Juliaでは、 ``true`` や ``false`` などの値をディスパッチすることはできません。
-しかし、パラメータ型ではディスパッチすることができ、型、記号、整数、浮動小数点数チュープルなど
+しかし、パラメータ型ではディスパッチすることができ、型、記号、整数、浮動小数点数タプルなど
 「プレーンなビット」値を含めることができます。一般的な例は、 ``T`` が ``Float64`` のような型を表し、
 ``N`` が ``Int`` を表す ``Array{T,N}`` の次元数パラメータです。
 
