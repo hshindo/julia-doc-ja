@@ -92,4 +92,24 @@
 | composite   |  コンポジット
 | generic programming   |  汎用プログラミング
 | parametric polymorphism   |  パラメトリック多様型
-| Singleton Types   |  シングルトン型                 
+| Singleton Types   |  シングルトン型
+| signature   |  特徴
+| catch-all   |  包括的な
+| core operations   |  コアオペレーション
+| functor   |  functor
+| outer constructor methods   |  アウターコンストラクタメソッド
+| inner constructor methods   |  インナーコンストラクタメソッド
+| conversion and promotion   |  変換とプロモーション
+| lossless conversion   |  可逆変換
+| interface   |  インタフェース
+| standard module   |  スタンダードモジュール
+| associative collection   |  連結コレクション
+| fenced code block   |  分離コードブロック
+| Markdown   |  マークダウン
+| interned string   |  intern文字列
+| prefix notation   |  プレフィックス表記法
+| build step   |  ビルド工程
+| preprocessor   |  プレプロセッサ
+| quoted expression   |  引用式
+| stdlib-collections-iteration   |  stdlibコレクションの反復
+| Hygiene   |  衛生規約
